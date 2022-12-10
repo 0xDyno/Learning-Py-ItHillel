@@ -18,12 +18,12 @@ win_congrats = "Congratulations, you guesses the number, it's %d"
 lose_close = "Oh sad, you were so close"
 
 
-def is_float(line):
-	try:
-		float(line)
-		return True
-	except ValueError:
-		return False
+# def is_float(line):
+# 	try:
+# 		float(line)
+# 		return True
+# 	except ValueError:
+# 		return False
 
 
 def play():
@@ -46,7 +46,10 @@ def play():
 
 	except ValueError:
 		text = text.lower()
-		if is_float(text):
+		# Works for 1.1 1,2 and "123,123,23.2323", but doesn't work for "."..
+		# But it general I'd use method to check it...
+		if ("." in text and text.count(".") == 1) \
+			or ("," in text and text.count(",") == 1):
 			print(type_error % "float")
 		else:
 			if text == "exit" or text == "e":
