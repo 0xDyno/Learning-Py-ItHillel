@@ -1,2 +1,7 @@
-/.idea
-/__pycache__
+# Folders
+/.idea/
+*__pycache__/
+
+
+# Files
+.DS_Store
