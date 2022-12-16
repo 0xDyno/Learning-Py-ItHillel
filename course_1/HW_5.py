@@ -39,7 +39,7 @@ def punctuation_handler(text, dict_) -> str:
 	:return: changed text
 	"""
 	for k, v in dict_.items():
-			text = text.replace(k, v)
+		text = text.replace(k, v)
 	return text
 
 
