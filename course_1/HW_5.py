@@ -24,7 +24,20 @@ story = "Mr. and Mrs. Dursley, of number four, Privet Drive, were \
 
 
 def punctuation_handler(text, dict_) -> str:
-	"""Returns back required symbols and deletes unnecessary"""
+	"""
+	format for the dict:
+	"from_what_change": "to_what_change"
+
+	dict_ = {
+	"." : "--",
+	"," : "--"
+	}				<<< - it will change all . and , to --
+
+	Returns back text with changed text
+	:param text: text
+	:param dict_: dict with changes
+	:return: changed text
+	"""
 	for k, v in dict_.items():
 			text = text.replace(k, v)
 	return text
@@ -32,6 +45,12 @@ def punctuation_handler(text, dict_) -> str:
 
 
 def delete_punctuation(text: str) -> str:
+	"""
+	Check every chapter in the text, if it's letter or space - it adds to the another
+	list and then joins it to one string. In the result we have line with no punctuation
+	:param text: text from which delete delete_punctuation
+	:return: text with no delete_punctuation
+	"""
 	return "".join([x for x in text if x.isalpha() or x.isspace()])
 
 
