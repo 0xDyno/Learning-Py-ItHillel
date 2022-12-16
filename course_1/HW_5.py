@@ -1,6 +1,5 @@
 """
-This task is very weird, because many tasks are unreachable. Couch doesn't want to change it.
-Hardcode.
+This task is very weird.
 
 1. Clear the story of punctuation.
 2. Create var story_words: list with words from story
