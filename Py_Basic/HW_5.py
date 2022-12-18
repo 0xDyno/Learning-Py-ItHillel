@@ -68,6 +68,8 @@ return_dot = {
 # 0 - Delete unnecessary spaces
 while "  " in story:
 	story = story.replace("  ", " ")
+# Also can be done by using split and then join. But I think "while" is faster
+# " ".join(story.split())
 
 # 1
 one_line = delete_punctuation(story)
