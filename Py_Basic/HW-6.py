@@ -75,11 +75,14 @@ if __name__ == '__main__':
 	from random import randint as rint
 
 	# 1 & 2
-	all_ingredients = dict()
-	for burger in burgers:											# for all burgers
-		for ingredient in burger["ingredients"]:					# for all ingredients in the burger
-			if ingredient not in all_ingredients:					# add to dict if we don't have it yet
-				all_ingredients[ingredient] = rint(0, 9)
+	ingredients_set = set(burgers[0]["ingredients"]) | set(burgers[1]["ingredients"])
+	all_ingredients = dict.fromkeys(ingredients_set, rint(0, 9))
+
+	# all_ingredients = dict()
+	# for burger in burgers:										# for all burgers
+	# 	for ingredient in burger["ingredients"]:					# for all ingredients in the burger
+	# 		if ingredient not in all_ingredients:					# add to dict if we don't have it yet
+	# 			all_ingredients[ingredient] = rint(0, 9)
 
 	# 3e
 	[burger["addresses"].clear() for burger in burgers]				# clear addr list
