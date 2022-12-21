@@ -5,6 +5,7 @@ Questions:
 - how to see code of basics functions -> list / len etc
 """
 
+
 def first():
     # shows in beautiful life
     # 2 spaces after FROM
