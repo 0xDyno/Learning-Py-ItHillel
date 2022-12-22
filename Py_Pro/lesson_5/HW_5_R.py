@@ -9,22 +9,6 @@ string = """Far far away, behind the word mountains, far from the countries Voka
 if __name__ == '__main__':
     text = string.replace("\'", "").replace("\"", "").lower()
     words = text.replace(",", "").replace(".", "").split()
-    
-    # 1 - saves info, doesn't use dict
-    max_met = 0
-    word_met = ""
-    dict_words = dict()
-    
-    for word in words:
-        met = words.count(word)
-        
-        if word not in dict_words:
-            dict_words[word] = met
-            
-        if max_met <= met:
-            max_met = met
-            word_met = word
-    print(word_met, max_met)
 
     # 3 - Improved #2, 10x faster, saves info, uses dict
     dict_words_3 = dict()
@@ -35,6 +19,23 @@ if __name__ == '__main__':
     
     max_ = max(dict_numb.keys())
     print(dict_numb.get(max_))
+
+    # 1 - saves info, doesn't use dict
+    
+    # max_met = 0
+    # word_met = ""
+    # dict_words = dict()
+    #
+    # for word in words:
+    #     met = words.count(word)
+    #
+    #     if word not in dict_words:
+    #         dict_words[word] = met
+    #
+    #     if max_met <= met:
+    #         max_met = met
+    #         word_met = word
+    # print(word_met, max_met)
     
     # 2 - 10 times faster than #1, doesn't save info, uses dict
     
