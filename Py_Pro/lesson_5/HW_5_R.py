@@ -1,12 +1,6 @@
 """
-A string is given (very large). Print the word that occurs most often in
-    this line. If there are several such words, print the last one.
-
-The problem must be solved using a dictionary.
+Retake HW_5
 """
-from time import time
-
-import HW_5
 
 
 if __name__ == '__main__':
