@@ -62,7 +62,10 @@ if __name__ == '__main__':
         
         # Task 3
         if movie_in_rewards["type"] == "Winner":
-            movie_winner[movie_name].append(movie_in_rewards)
+            new_data_to_save = {"year": movie_in_rewards["year"],
+                                "award": movie_in_rewards["award"],
+                                "event_name": movie_in_rewards["event_name"]}
+            movie_winner[movie_name].append(new_data_to_save)
             
     
     # Task 2
