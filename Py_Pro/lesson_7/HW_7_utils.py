@@ -8,13 +8,13 @@ def ave_size(all_data: str) -> str:
     total = len(el) / 3
     
     all_heights = [float(el[i]) for i in range(1, len(el), 3) if el[i]]
-    ave_height = round(inch_to_cm(sum(all_heights) / total))
+    avg_height = round(inch_to_cm(sum(all_heights) / total))
     
     all_weights = [float(el[i]) for i in range(2, len(el), 3) if el[i]]
-    ave_weight = round(pound_to_kg(sum(all_weights) / total))
+    avg_weight = round(pound_to_kg(sum(all_weights) / total))
     
-    return f"Ave Height - {str(ave_height)} cm <br >" \
-           f"Ave Weight - {str(ave_weight)} kg"
+    return f"Avg Height - {str(avg_height)} cm <br >" \
+           f"Avg Weight - {str(avg_weight)} kg"
 
 
 def inch_to_cm(inch: int | float) -> float:
@@ -50,8 +50,8 @@ def ave_size_universal(all_data: str) -> str:
         total_height += height
         total_weight += weight
     
-    ave_height = round(inch_to_cm(total_height) / total_students)
-    ave_weight = round(pound_to_kg(total_weight) / total_students)
+    avg_height = round(inch_to_cm(total_height) / total_students)
+    avg_weight = round(pound_to_kg(total_weight) / total_students)
     
-    return f"Ave Height - {str(ave_height)} cm <br >" \
-           f"Ave Weight - {str(ave_weight)} kg"
+    return f"Avg Height - {str(avg_height)} cm <br >" \
+           f"Avg Weight - {str(avg_weight)} kg"

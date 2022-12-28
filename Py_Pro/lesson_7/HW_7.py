@@ -1,15 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 
 import HW_7_utils
 
 
 app = Flask(__name__)
 size_data = "hw.csv"
+port = 12345
 
 
 @app.route("/")
 def index():
-    return "Hey, open 127.0.0.1:5000/avr_data"
+    return render_template("index.html", port=port)
 
 
 @app.route("/avr_data")
@@ -19,4 +20,4 @@ def get_avr_data():
     return HW_7_utils.ave_size(data)
 
 
-app.run(port=12345)
+app.run(debug=True, port=port)
