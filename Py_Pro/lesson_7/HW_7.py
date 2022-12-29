@@ -20,4 +20,4 @@ def get_avr_data():
     return HW_7_utils.ave_size(data)
 
 
-app.run(debug=True, port=port)
+app.run(port=port)

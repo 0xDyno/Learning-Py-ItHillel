@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td width="130px">
+                    <strong><a href="/">{{ title }}</a></strong>
+                </td>
+                <td width="100px">
+                    <a href="/all-music">All Music</a>
+                </td>
+                <td width="100px">
+                    <a href="/add-music">Add Music</a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <h1>{{ content }}</h1>
+
+        <form method="POST">
+        <p>
+            Music name: <br>
+            <label for="music_name_id"></label>
+            <input id="music_name_id" name="music name" type="text" value="{{ request.form["music name"] }}">
+        </p>
+        <p>
+            Author <br>
+            <label for="music_author_id"></label>
+            <input id="music_author_id" name="author" type="text" value="{{ request.form["author"] }}">
+        </p>
+        <p>
+            <input type="submit" value="Add">
+        </p>
+    </form>
+    </center>
+</body>
+</html>

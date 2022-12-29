@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} - {{ page_name }}</title>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td width="130px">
+                    <strong><a href="/">{{ title }}</a></strong>
+                </td>
+                <td width="100px">
+                    <a href="/all-music">All Music</a>
+                </td>
+                <td width="100px">
+                    <a href="/add-music">Add Music</a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+    </center>
+
+    <center>
+        <h1>{{ content }}</h1>
+
+        <h1>{{ music_info[1] }}</h1>
+        <p>Author: {{ music_info[2] }}</p>
+        <p>Created: {{ music_info[3] }}</p>
+        <table>
+            <tr>
+                <td width="80" style="text-align: center">
+                    <a href="/update-music/{{ music_info[0] }}">Change</a>
+                </td>
+                <td width="80" style="text-align: center">
+                    <a href="/delete-music/{{ music_info[0] }}">Delete</a>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <a href="/all-music">Return</a>
+
+    </center>
+
+</body>
+</html>

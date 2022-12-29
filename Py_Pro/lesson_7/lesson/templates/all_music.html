@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} - {{ page_name }}</title>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td width="130px">
+                    <strong><a href="/">{{ title }}</a></strong>
+                </td>
+                <td width="100px">
+                    <a href="/all-music">All Music</a>
+                </td>
+                <td width="100px">
+                    <a href="/add-music">Add Music</a>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <hr>
+    <center>
+        <h1>{{ content }}</h1>
+        <table>
+            {% for music in all_music %}
+                <tr>
+                    <td width="250">
+                        {{ music[1] }}
+                    </td>
+                    <td width="150">
+                        {{ music[2] }}
+                    </td>
+                    <td width="80">
+                        <a href="/music-info/{{ music[0] }}">Details</a>
+                    </td>
+                    <td width="80">
+                        <a href="/update-music/{{ music[0] }}">Change</a> <br>
+                    </td>
+                    <td>
+                        <a href="/delete-music/{{ music[0] }}">Delete</a> <br>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
