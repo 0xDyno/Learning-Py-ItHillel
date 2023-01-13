@@ -1,6 +1,7 @@
 import sqlite3
 
 from faker import Faker
+
 from flask import Flask, render_template, request, redirect
 
 port = 12345
@@ -55,7 +56,6 @@ def update_music(music_id: int):
     cr = c.cursor()
     data = cr.execute("SELECT title, author FROM music WHERE id=?", (music_id,)).fetchall()
 
-    
     if request.method == "POST":
         name = request.form["music name"]
         author = request.form["author"]
@@ -65,7 +65,7 @@ def update_music(music_id: int):
             c.commit()
             cr.close()
             c.close()
-            return redirect(f"/all-music")
+            return redirect("/all-music")
     else:
         cr.close()
         c.close()
