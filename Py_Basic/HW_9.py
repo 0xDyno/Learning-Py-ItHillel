@@ -126,7 +126,6 @@ print(res5.get("movies"))
 # Part 3 - Task 1
 print()
 gl = globals().copy()
-for k, v in gl.items():
-    if inspect.isfunction(v):
-        print(inspect.getsource(v))
-    
+for value in gl.values():
+    if inspect.isfunction(value):
+        print(inspect.getsource(value))
