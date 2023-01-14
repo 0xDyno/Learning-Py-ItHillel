@@ -39,6 +39,10 @@ from HW_9_utils import actor_films
 
 
 def task_1(numbers: list) -> tuple:
+    """
+    Create a function that takes a list of numbers and returns a tuple. The first value of tuple is the average
+        value of all arguments, and the second value is the first number that is greater than the average.
+    """
     ave = sum(numbers) / len(numbers)
     for number in numbers:
         if number > ave:
@@ -46,16 +50,28 @@ def task_1(numbers: list) -> tuple:
         
         
 def task_2(numbers: list):
+    """
+    Create a function that accepts 1 parameter - a list of numbers. The function returns a new list consisting only of
+        the even numbers that were in the argument.
+    """
     return [number for number in numbers if number % 2 == 0]
 
 
 def task_3(grades: list):
+    """
+    Create a function that takes a list of tuples and returns the name of the item with the highest rating.
+    """
     scores = {v: k for k, v in grades}
     max_score = max(scores.keys())
     return scores.get(max_score)
 
 
 def task_4(award_name):
+    """
+    Create a function that takes the name of the award, looks it up in the film_awards dictionary and returns 1) the
+        year of the award 2) the name of the actor who was nominated for the award (if there was one) 3) type (Winner or
+        Nominee) You can use the work done from the previous DZ
+    """
     for result in film_awards.get("results"):
         if result.get("award_name") == award_name:
             res = {
@@ -72,6 +88,10 @@ def task_4(award_name):
         
 def task_5(movies: dict, min_score: int) -> dict:
     """
+    Create a function that accepts a number and returns a list of tuples (film, rating) from the variable actor_films
+        whose rating is greater than this number argument. If there are no such films, inform the user about it, if the
+        number is more than 10, the user will be informed about it.
+        
     dict with list of movies where score > than number & message about result:
     {
         "message": "str message to user",
