@@ -38,24 +38,24 @@ from HW_8_utils import film_awards
 from HW_9_utils import actor_films
 
 
-def task1(numbers: list) -> tuple:
+def task_1(numbers: list) -> tuple:
     ave = sum(numbers) / len(numbers)
     for number in numbers:
         if number > ave:
             return ave, number
         
         
-def task2(numbers: list):
+def task_2(numbers: list):
     return [number for number in numbers if number % 2 == 0]
 
 
-def task3(grades: list):
+def task_3(grades: list):
     scores = {v: k for k, v in grades}
     max_score = max(scores.keys())
     return scores.get(max_score)
 
 
-def task4(award_name):
+def task_4(award_name):
     for result in film_awards.get("results"):
         if result.get("award_name") == award_name:
             res = {
@@ -70,7 +70,7 @@ def task4(award_name):
             return res
         
         
-def task5(movies: dict, min_score: int) -> dict:
+def task_5(movies: dict, min_score: int) -> dict:
     """
     dict with list of movies where score > than number & message about result:
     {
@@ -98,28 +98,28 @@ def task5(movies: dict, min_score: int) -> dict:
 test_list = [1, 2, 3, 4, 12, 322, 55, 66, 71, 80, 94, 6, 10, 32]
 
 # Task 1
-res1 = task1(test_list)
+res1 = task_1(test_list)
 print(type(res1), res1)
 
 # Task 2
-res2 = task2(test_list)
+res2 = task_2(test_list)
 print(type(res2), res2)
 
 
 grade = [('English', 88), ('Biology', 90), ('Math', 97), ('International language', 82)]
 
 # Task 3
-res3 = task3(grade)
+res3 = task_3(grade)
 print(type(res3), res3)
 
 # Task 4
 award_names = ["Oscar", "Golden Reel Award", "NRJ Ciné Award"]
 for award in award_names:
-    res4 = task4(award)
+    res4 = task_4(award)
     print(res4)
 
 # Task 5
-res5 = task5(movies=actor_films, min_score=2)
+res5 = task_5(movies=actor_films, min_score=2)
 print(res5.get("message")) if res5.get("message") is not None else None
 print(res5.get("movies"))
 
