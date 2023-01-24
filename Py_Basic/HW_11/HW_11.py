@@ -1,7 +1,7 @@
 """
 1. Create a new .py file in PyCharm
 2. Import the os library
-3. Using the os library, create the files directory (folder).
+3. Using the os library, create the 'files' directory (folder).
 4. Change the current directory to the files directory
     ps: means to do - "cd" in the terminal
 5. Create a loop that iterates range from 1 to 10 (not inclusive), in the middle of the loop create 9 new folders
@@ -21,10 +21,11 @@ Optional
 import os
 
 # 3 - Done
-folder_name = "./new_folder"
+folder_name = "./files"
 os.mkdir(folder_name)
 
-# 4 - Done cd
+# 4 - Done
+os.chdir(folder_name)
 
 # 5 - Done
 for folder in range(1, 10):
