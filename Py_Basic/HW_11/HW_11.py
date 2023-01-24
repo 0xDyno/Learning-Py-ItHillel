@@ -19,7 +19,6 @@ Option
 
 # 2 - Done
 import os
-from time import sleep
 
 # 3 - Done
 folder_name = "./new_folder"
