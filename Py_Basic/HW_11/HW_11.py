@@ -11,7 +11,7 @@
 8. With the help of the os library, delete directories from 7 to 9
 9. Save the code from PyCharm to a new Google colab notebook
 
-Option
+Optional
 10. Using the time library, create a decorator that will return the running time of the function to which the
     decorator is applied.
 """
